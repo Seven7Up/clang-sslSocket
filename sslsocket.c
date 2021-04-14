@@ -38,8 +38,8 @@ int main(int argc, char *argv[]) {
 
   method = SSLv23_client_method();
   ctx = SSL_CTX_new(method);
-  SSL_CTX_use_certificate_file(ctx, "cert.pem", SSL_FILETYPE_PEM);
   SSL_CTX_use_PrivateKey_file(ctx, "cert.pem", SSL_FILETYPE_PEM);
+  SSL_CTX_use_certificate_file(ctx, "cert.pem", SSL_FILETYPE_PEM);
 
   net_socket = socket(AF_INET, SOCK_STREAM, 0);
 
