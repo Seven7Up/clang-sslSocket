@@ -14,7 +14,7 @@ Go to sslsocket.c and change cert and privkey file name:
 
 
 ## Secondly: Compile your script.
-    $ gcc -g -Wall -lssl -lcrypto -o sslsocket sslsocket.c
+    $ gcc -g -Wall -o sslsocket sslsocket.c -lssl -lcrypto
 
 ## Thirdly: Run It.
     $ ./sslsocket
