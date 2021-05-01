@@ -29,7 +29,7 @@ That's all.
 
 If you wanna to check it, you can send request to httpbin.org in 443 (https) port:
 
-'''shell
+```
 $ ./sslsocket 34.231.30.52 /get
 HTTP/1.1 200 OK
 Date: Wed, 14 Apr 2021 13:43:02 GMT
@@ -51,6 +51,6 @@ Access-Control-Allow-Credentials: true
 "origin": "<I can\'t show you my ip address :)>",
 "url": "https://34.231.30.52/get"
 }
-'''
+```
 
 Done!
