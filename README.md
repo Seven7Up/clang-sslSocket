@@ -48,7 +48,7 @@ Access-Control-Allow-Credentials: true
 "User-Agent": "Mozilla/5.0 (Microsoft Windows NT; Win64 x64; rv:86.0) Gecko/20100101 Firefox/86.0",
 "X-Amzn-Trace-Id": "Root=1-6076f166-356138672c6ae5874ce563fa"
 },
-"origin": "<I can\'t show you my ip address :)>",
+"origin": "<I can't show you my ip address :)>",
 "url": "https://34.231.30.52/get"
 }
 ```
