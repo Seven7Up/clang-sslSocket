@@ -26,6 +26,7 @@ int main(int argc, char *argv[]){
     print_err("Usage: %s <hostname> <file or path to get>\n", argv[0]);
 
   int net_socket;
+  int conn_socket;
   struct sockaddr_in servaddr;
   char *IPbuffer;
   struct hostent *host_entry;
@@ -48,7 +49,7 @@ int main(int argc, char *argv[]){
   if (inet_pton(AF_INET, IPbuffer, &servaddr.sin_addr.s_addr) <= 0)
     print_err("Could not convert the ip address to a binary ip address!\n");
 
-  if ((connect(net_socket, (struct sockaddr *) &servaddr, sizeof(servaddr))) < 0)
+  if ((conn_socket = connect(net_socket, (struct sockaddr *) &servaddr, sizeof(servaddr))) < 0)
     print_err("Could not connect to the address!\n");
 
   bzero(&sendbuff, sizeof(sendbuff));
@@ -68,6 +69,7 @@ int main(int argc, char *argv[]){
     bzero(&recvbuff, sizeof(recvbuff));
   }
 
+  close(conn_socket);
   close(net_socket);
 
   return 0;
